@@ -14,6 +14,8 @@
 		3E99287C1CC631EF00ADAF35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E99287A1CC631EF00ADAF35 /* LaunchScreen.storyboard */; };
 		3E9928871CC631EF00ADAF35 /* ga_assignment3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9928861CC631EF00ADAF35 /* ga_assignment3Tests.swift */; };
 		3E9928921CC631EF00ADAF35 /* ga_assignment3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9928911CC631EF00ADAF35 /* ga_assignment3UITests.swift */; };
+		3E9928A01CC63B6C00ADAF35 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99289F1CC63B6C00ADAF35 /* SecondView.swift */; };
+		3E9928A21CC6440900ADAF35 /* ArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9928A11CC6440900ADAF35 /* ArrayTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3E99288D1CC631EF00ADAF35 /* ga-assignment3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ga-assignment3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9928911CC631EF00ADAF35 /* ga_assignment3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ga_assignment3UITests.swift; sourceTree = "<group>"; };
 		3E9928931CC631EF00ADAF35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E99289F1CC63B6C00ADAF35 /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		3E9928A11CC6440900ADAF35 /* ArrayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				3E9928781CC631EF00ADAF35 /* Assets.xcassets */,
 				3E99287A1CC631EF00ADAF35 /* LaunchScreen.storyboard */,
 				3E99287D1CC631EF00ADAF35 /* Info.plist */,
+				3E99289F1CC63B6C00ADAF35 /* SecondView.swift */,
+				3E9928A11CC6440900ADAF35 /* ArrayTableViewController.swift */,
 			);
 			path = "ga-assignment3";
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9928A01CC63B6C00ADAF35 /* SecondView.swift in Sources */,
 				3E9928741CC631EF00ADAF35 /* ViewController.swift in Sources */,
 				3E9928721CC631EF00ADAF35 /* AppDelegate.swift in Sources */,
+				3E9928A21CC6440900ADAF35 /* ArrayTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +492,7 @@
 				3E9928981CC631EF00ADAF35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E9928991CC631EF00ADAF35 /* Build configuration list for PBXNativeTarget "ga-assignment3Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				3E99289B1CC631EF00ADAF35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E99289C1CC631EF00ADAF35 /* Build configuration list for PBXNativeTarget "ga-assignment3UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				3E99289E1CC631EF00ADAF35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
