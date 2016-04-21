@@ -29,6 +29,38 @@ class ArrayTableViewController2: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
+    @IBAction func addAnimals(sender: AnyObject) {
+        var alertController:UIAlertController?
+        alertController = UIAlertController(title: "Hi There!",
+                                            message: "Please enter a name",
+                                            preferredStyle: .Alert)
+        
+        alertController!.addTextFieldWithConfigurationHandler(
+            {(textField: UITextField!) in
+                textField.placeholder = "Name"
+        })
+        
+        let action = UIAlertAction(title: "Submit",
+                                   style: UIAlertActionStyle.Default,
+                                   handler: {[weak self]
+                                    (paramAction:UIAlertAction!) in
+                                    if let textFields = alertController?.textFields{
+                                        let theTextFields = textFields as [UITextField]
+                                        let enteredText = theTextFields[0].text!
+                                        self!.animals.append(Animal(name: enteredText,species:"Dog"))
+                                    }
+            })
+        
+        alertController?.addAction(action)
+        self.presentViewController(alertController!,
+                                   animated: true,
+                                   completion: nil)
+        
+
+  }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,6 +86,7 @@ class ArrayTableViewController2: UITableViewController {
 
         return cell
     }
+    
     
 
     /*
