@@ -16,32 +16,25 @@ class ArrayTableViewController2: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.animals = [Animal(name:"Tony",species: "Tiger")]
-        self.animals.append(Animal(name: "Felix", species: "Cat"))
-        self.animals.append(Animal(name: "Remi", species: "Rat"))
-        self.animals.append(Animal(name: "Spyro", species: "Dragon"))
-        self.animals.append(Animal(name: "Milou", species: "Dog"))
-
-
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        initializeArray()
     }
     
     
     @IBAction func addAnimals(sender: AnyObject) {
+        
         var alertController:UIAlertController?
         alertController = UIAlertController(title: "Hi There!",
-                                            message: "Please enter a name",
+                                            message: "Please enter a new animal",
                                             preferredStyle: .Alert)
         
         alertController!.addTextFieldWithConfigurationHandler(
             {(textField: UITextField!) in
                 textField.placeholder = "Name"
+        })
+        
+        alertController!.addTextFieldWithConfigurationHandler(
+            {(textField: UITextField!) in
+                textField.placeholder = "Species"
         })
         
         let action = UIAlertAction(title: "Submit",
@@ -51,7 +44,8 @@ class ArrayTableViewController2: UITableViewController {
                                     if let textFields = alertController?.textFields{
                                         let theTextFields = textFields as [UITextField]
                                         let enteredText = theTextFields[0].text!
-                                        self!.animals.append(Animal(name: enteredText,species:"Dog"))
+                                        let enteredText2 = theTextFields[1].text!
+                                        self!.animals.append(Animal(name: enteredText,species: enteredText2))
                                         self!.tableViewC.reloadData()
                         
                                     }
@@ -64,6 +58,17 @@ class ArrayTableViewController2: UITableViewController {
         
 
   }
+    
+    func initializeArray(){
+        
+        self.animals = [Animal(name:"Tony",species: "Tiger")]
+        self.animals.append(Animal(name: "Felix", species: "Cat"))
+        self.animals.append(Animal(name: "Remi", species: "Rat"))
+        self.animals.append(Animal(name: "Spyro", species: "Dragon"))
+        self.animals.append(Animal(name: "Milou", species: "Dog"))
+
+        
+    }
     
 
     override func didReceiveMemoryWarning() {
