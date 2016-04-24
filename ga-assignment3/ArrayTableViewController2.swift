@@ -10,6 +10,8 @@ import UIKit
 
 class ArrayTableViewController2: UITableViewController {
     
+    @IBOutlet var tableViewC: UITableView!
+    
     var animals: [Animal] = [Animal]()
 
     override func viewDidLoad() {
@@ -50,6 +52,8 @@ class ArrayTableViewController2: UITableViewController {
                                         let theTextFields = textFields as [UITextField]
                                         let enteredText = theTextFields[0].text!
                                         self!.animals.append(Animal(name: enteredText,species:"Dog"))
+                                        self!.tableViewC.reloadData()
+                        
                                     }
             })
         
